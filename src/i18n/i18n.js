@@ -15,7 +15,7 @@ const resources = {
           passionate: "Strategy",
         },
         description:
-          "Frontend Developer with a rare blend of coding, design, and business strategy. 1.5+ years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
+          "Frontend Developer with a rare blend of coding, design, and business strategy. 2+ years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
         scrollDown: "Scroll Down",
       },
 
@@ -45,6 +45,8 @@ const resources = {
         "Reco, developed in React.js with Redux and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
       RecoApp_description:
         "Built with React Native, Expo, Redux, and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
+      Superheroes_description:
+        "Built with React Native and TypeScript for superhero team management. Implements team CRUD, biometric authentication, offline search, and favorites, using Redux Toolkit for global state, API consumption, and data persistence.",
       FocusTime_description:
         "FocusTime is a productivity app built with React Native and Expo. The app is cross-platform, leveraging hooks for state management and Git for version control.",
       Portfolio_description:
@@ -63,7 +65,7 @@ const resources = {
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador Frontend con una rara mezcla de codificación, diseño y estrategia de negocio. Más de 1,5 años de experiencia en aplicaciones web y móviles con React y React Native, además de más de 6 años en diseño y marketing digital.",
+          "Desarrollador Frontend con una rara mezcla de codificación, diseño y estrategia de negocio. Más de 2 años de experiencia en aplicaciones web y móviles con React y React Native, además de más de 6 años en diseño y marketing digital.",
         scrollDown: "Deslizar hacia abajo",
       },
       // General
@@ -91,7 +93,9 @@ const resources = {
       Reco_description:
         "Desarrollada en React.js con Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y fluidez.",
       RecoApp_description:
-        "Reco APP, desarrollada en React Native con Expo, Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y una experiencia fluida.",
+        "Reco App, desarrollada en React Native con Expo, Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y una experiencia fluida.",
+      Superheroes_description:
+        "App móvil en React Native y TypeScript para gestión de equipos de superhéroes. Implementa CRUD de equipos, autenticación biométrica, búsqueda offline y favoritos, usando Redux Toolkit para estado global, consumo de API y persistencia de datos.",
       FocusTime_description:
         "FocusTime es una app de productividad construida con React Native y Expo. Es multiplataforma y emplea hooks para el estado y Git para el control de versiones.",
       Portfolio_description:

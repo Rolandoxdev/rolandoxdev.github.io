@@ -1,12 +1,4 @@
-import {
-  Box,
-  Typography,
-  Button,
-  Grid,
-  Card,
-  CardMedia,
-  Stack,
-} from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
@@ -15,7 +7,6 @@ import heroesApp from "../assets/images/heroesApp.jpg";
 import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
-import TODo_logo from "../assets/images/todo_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
 import superHero from "../assets/images/super_logo.svg";
 import reactLogo from "../assets/images/logos/react.svg";
@@ -33,7 +24,7 @@ const projects = [
     type: "mobile",
     description: "RecoApp_description",
     repoLink: "https://github.com/orellanamr/reco-app",
-    liveLink: "",
+    liveLink: "https://play.google.com/store/apps/details?id=gt.com.reco.app",
     image: RecoApp,
     logo: Reco_logo,
     technologies: [
@@ -57,21 +48,21 @@ const projects = [
       { name: "Expo", logo: expoLogo },
     ],
   },
-  {
-    id: 3,
-    title: "Focus Time",
-    type: "mobile",
-    description: "FocusTime_description",
-    repoLink: "https://github.com/orellanamr/focusTime",
-    liveLink: "",
-    image: focusTimeCover,
-    logo: TODo_logo,
-    technologies: [
-      { name: "React Native", logo: reactLogo },
-      { name: "Expo", logo: expoLogo },
-      { name: "Git", logo: gitLogo },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "Focus Time",
+  //   type: "mobile",
+  //   description: "FocusTime_description",
+  //   repoLink: "https://github.com/orellanamr/focusTime",
+  //   liveLink: "",
+  //   image: focusTimeCover,
+  //   logo: TODo_logo,
+  //   technologies: [
+  //     { name: "React Native", logo: reactLogo },
+  //     { name: "Expo", logo: expoLogo },
+  //     { name: "Git", logo: gitLogo },
+  //   ],
+  // },
   {
     id: 4,
     title: "Reco Web",

@@ -20,6 +20,7 @@ import logoRolando from "../assets/images/logoRolando.svg";
 import RolandoCV from "../assets/docs/Rolando_Orellana_CV.pdf";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@mui/material/styles";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -100,9 +101,7 @@ const Navbar = () => {
             >
               {t("contact")}
             </Button>
-            <IconButton color="inherit" onClick={toggleLanguage}>
-              <TranslateIcon />
-            </IconButton>
+            <LanguageSwitcher />
             <Button
               variant="contained"
               color="primary"
@@ -194,15 +193,7 @@ const Navbar = () => {
                     py: 8,
                   }}
                 >
-                  <Button
-                    color="inherit"
-                    size="small"
-                    onClick={toggleLanguage}
-                    sx={{ display: "flex", alignItems: "center" }}
-                  >
-                    <TranslateIcon sx={{ mr: 1 }} />
-                    {i18n.language === "en" ? "Español" : "English"}
-                  </Button>
+                  <LanguageSwitcher />
 
                   <Button
                     variant="contained"
@@ -214,6 +205,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     sx={{
                       backgroundColor: "#EFEFEF",
+                      alignItems: "left",
                       color: "#000000",
                       "&:hover": {
                         backgroundColor: "primary.main",

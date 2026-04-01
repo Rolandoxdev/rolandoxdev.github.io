@@ -15,14 +15,14 @@ const resources = {
           passionate: "Strategy",
         },
         description:
-          "Frontend Developer with a rare blend of coding, design, and business strategy. 2 years of experience in web and mobile apps using React & React Native, plus 6+ years in design and digital marketing.",
+          "React Native Developer with 2.5 years of experience building and shipping production-ready mobile apps using React Native, Redux Toolkit, and REST APIs, including multi-tenant architectures and App Store releases.",
         scrollDown: "Scroll Down",
       },
 
       // General
       about: "About",
       about_me_description:
-        "I’m not just a frontend developer—I’m a designer with over 6 years of experience and a business-minded thinker. This means I approach problems with creativity, code with purpose, and build interfaces that are not only beautiful, but usable and strategic. I bring value to teams that want more than execution—they want someone who understands users, product, and goals.",
+        "I’m a React Native developer with a strong foundation in design and product thinking. With over 6 years of experience in design and digital strategy, I bring a unique perspective that combines usability, aesthetics, and technical execution. I don’t just build interfaces — I focus on creating scalable, user-centered solutions that align with real business needs. I’ve worked on production applications, collaborating with cross-functional teams to deliver features that improve workflows and user experience. I add value to teams that care about quality, usability, and building products that truly work in real-world scenarios.",
       about_me_title: "Why hire me?",
       all_rights_reserved: "All rights reserved",
       contact: "Contact",
@@ -38,7 +38,9 @@ const resources = {
 
       // Projects Section
       projects_subtitle:
-        "Delivering impactful products tailored to real-world needs.",
+        "Building production-ready solutions focused on real-world impact and scalability.",
+      Trakkon_description:
+        "Multi-tenant React Native app for a Brooklyn, NY organization, supporting multiple clients from a single codebase. Worked on core features, UX, API integration, and production releases (iOS & Android).",
       byteCode_description:
         "byteCode is a modern landing page built with React.js and Material UI. Designed to attract and convert users, it showcases a dynamic and responsive design.",
       Reco_description:
@@ -49,8 +51,8 @@ const resources = {
         "Built with React Native and TypeScript for superhero team management. Implements team CRUD, biometric authentication, offline search, and favorites, using Redux Toolkit for global state, API consumption, and data persistence.",
       FocusTime_description:
         "FocusTime is a productivity app built with React Native and Expo. The app is cross-platform, leveraging hooks for state management and Git for version control.",
-      Portfolio_description:
-        "This portfolio was built with React.js, Vite, and Material UI, it features a modern, responsive design and smooth animations.",
+      Alltix_description:
+        "Responsive landing page (React + Material UI) for a Brooklyn, NY client, focused on clean UI and conversion-driven UX.",
     },
   },
   es: {
@@ -65,13 +67,13 @@ const resources = {
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador Frontend con una rara mezcla de codificación, diseño y estrategia de negocio. 2 años de experiencia en aplicaciones web y móviles con React y React Native, además de más de 6 años en diseño y marketing digital.",
+          "Desarrollador React Native con más de 2.5 años de experiencia construyendo y lanzando aplicaciones móviles en producción. Especializado en arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
         scrollDown: "Deslizar hacia abajo",
       },
       // General
       about: "Acerca",
       about_me_description:
-        "No soy solo un desarrollador frontend: también soy diseñador con más de 6 años de experiencia y tengo una mentalidad estratégica gracias a mi formación en negocios (MBA). Esto me permite abordar los proyectos con creatividad, programar con propósito y construir interfaces que no solo son atractivas, sino también usables y estratégicas. Aporto valor a equipos que buscan más que ejecución: buscan alguien que entienda al usuario, el producto y los objetivos.",
+        "Soy desarrollador React Native con una sólida base en diseño y pensamiento de producto. Con más de 6 años de experiencia en diseño y estrategia digital, aporto una perspectiva que combina usabilidad, estética y ejecución técnica.\n\nHe trabajado en aplicaciones móviles en producción, incluyendo un sistema multi-tenant que soporta múltiples organizaciones desde un solo codebase. Mi experiencia va más allá del desarrollo: contribuyo en decisiones de UX, flujos de datos y procesos de release.\n\nMe enfoco en crear soluciones escalables, centradas en el usuario y alineadas con necesidades reales de negocio.",
       about_me_title: "¿Por qué contratarme?",
       all_rights_reserved: "Todos los derechos reservados",
       contact: "Contacto",

@@ -4,7 +4,6 @@ import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
 import RecoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.jpg";
 import heroesApp from "../assets/images/heroesApp.jpg";
-import portfolioRolando from "../assets/images/portfolio_Rolando.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
@@ -14,12 +13,29 @@ import gitLogo from "../assets/images/logos/git.svg";
 import reduxLogo from "../assets/images/logos/redux.svg";
 import materialUILogo from "../assets/images/logos/mui.svg";
 import expoLogo from "../assets/images/logos/expo.svg";
-import focusTimeCover from "../assets/images/FocusTimeApp.png";
+import trakkonApp from "../assets/images/trakkon_project.jpg";
+import trakkonLogo from "../assets/images/trakkon-logo.svg";
+import alltixWeb from "../assets/images/alltix_website.jpg";
 import ProjectCardsSection from "./ProjectCardsSection";
 
 const projects = [
   {
     id: 1,
+    title: "Trakkon App",
+    type: "mobile",
+    description: "Trakkon_description",
+    repoLink: "",
+    liveLink: "https://apps.apple.com/app/chesed-of-flatbush/id6760507798",
+    image: trakkonApp,
+    logo: trakkonLogo,
+    technologies: [
+      { name: "React Native", logo: reactLogo },
+      { name: "Redux", logo: reduxLogo },
+      { name: "Expo", logo: expoLogo },
+    ],
+  },
+  {
+    id: 2,
     title: "Reco App",
     type: "mobile",
     description: "RecoApp_description",
@@ -34,7 +50,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Superheroes App",
     type: "mobile",
     description: "Superheroes_description",
@@ -80,7 +96,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "byteCode",
     type: "web",
     description: "byteCode_description",
@@ -95,13 +111,13 @@ const projects = [
     ],
   },
   {
-    id: 5,
-    title: "Portfolio",
+    id: 6,
+    title: "Alltix",
     type: "web",
-    description: "Portfolio_description",
-    repoLink: "https://github.com/orellanamr/orellanamr.github.io",
-    liveLink: "https://orellanamr.github.io/",
-    image: portfolioRolando,
+    description: "Alltix_description",
+    repoLink: "",
+    liveLink: "https://alltix-landing.vercel.app/",
+    image: alltixWeb,
     logo: todo_logo,
     technologies: [
       { name: "React", logo: reactLogo },

@@ -15,7 +15,7 @@ const resources = {
           passionate: "Strategy",
         },
         description:
-          "React Native Developer with 2.5 years of experience building and shipping production-ready mobile apps using React Native, Redux Toolkit, and REST APIs, including multi-tenant architectures and App Store releases.",
+          "React Native Developer with 2.5+ years of experience building and shipping production-ready mobile apps using React Native, Redux Toolkit, and REST APIs, including multi-tenant architectures and App Store releases.",
         scrollDown: "Scroll Down",
       },
 
@@ -67,7 +67,7 @@ const resources = {
           passionate: "Apasionado",
         },
         description:
-          "Desarrollador React Native con más de 2.5 años de experiencia construyendo y lanzando aplicaciones móviles en producción. Especializado en arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
+          "Desarrollador React Native con 2.5+ años de experiencia construyendo y lanzando aplicaciones móviles en producción. Especializado en arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
         scrollDown: "Deslizar hacia abajo",
       },
       // General

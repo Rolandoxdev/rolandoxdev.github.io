@@ -32,6 +32,68 @@ const resources = {
       live_preview: "Live preview",
       projects: "Projects",
       certifications: "Certifications",
+      case_study: {
+        cta: "Case Study",
+        ctaFor: "View the {{project}} case study",
+        backToProjects: "Back to Projects",
+        eyebrow: "MOBILE APPLICATION CASE STUDY",
+        subtitle: "React Native Application Development",
+        overview:
+          "Trakkon is a mobile application for emergency medical services and durable medical equipment (DME) operations, supporting workflows for calls, equipment, users, accounts, and departments.",
+        roleLabel: "Role",
+        role: "React Native / Frontend Developer",
+        stackLabel: "Core stack",
+        challengeTitle: "The Challenge",
+        challenge:
+          "Improve the reliability of an existing application while maintaining operational workflows, role-based access, and separate client configurations.",
+        contributionsTitle: "Key Contributions",
+        contributions: [
+          {
+            title: "Application stability",
+            description:
+              "Investigated and fixed bugs, improved existing workflows, and addressed inconsistent UI behavior through ticket-based development.",
+          },
+          {
+            title: "Role-based permissions",
+            description:
+              "Extended existing permission checks to control access to actions based on user roles and call assignments.",
+          },
+          {
+            title: "Dynamic forms",
+            description:
+              "Improved required-field validation across five call types, including resetting validation errors when users switch between types.",
+          },
+          {
+            title: "Multi-client support",
+            description:
+              "Supported Trakkon and Chesed of Flatbush (COF) configurations from a shared mobile codebase.",
+          },
+          {
+            title: "Mobile delivery",
+            description:
+              "Generated Android APK builds for QA, prepared iOS builds for TestFlight, and participated in Android and iOS release workflows.",
+          },
+        ],
+        highlightLabel: "TECHNICAL HIGHLIGHT",
+        highlightTitle: "Backend data consistency",
+        highlight:
+          "Implemented a Laravel API query fix that grouped alternative equipment statuses within the account filter, preserving the intended account-scoping condition.",
+        outcomeTitle: "Outcome",
+        outcome:
+          "Contributed to more consistent application workflows, corrected reported defects, and supported QA and release delivery across multiple client configurations.",
+        technologiesTitle: "Technologies",
+        technologies: [
+          "React Native",
+          "TypeScript",
+          "Expo / EAS",
+          "Expo Router",
+          "Zustand",
+          "React Hook Form",
+          "Laravel",
+          "PHP",
+          "REST API",
+        ],
+      },
       view_certificate: "View Certificate",
       view_repo: "View Repo",
       whatsapp_cta: "Let's Connect!",
@@ -83,6 +145,68 @@ const resources = {
       live_preview: "Vista previa",
       projects: "Proyectos",
       certifications: "Certificaciones",
+      case_study: {
+        cta: "Caso de estudio",
+        ctaFor: "Ver el caso de estudio de {{project}}",
+        backToProjects: "Volver a proyectos",
+        eyebrow: "CASO DE ESTUDIO DE APLICACIÓN MÓVIL",
+        subtitle: "Desarrollo de aplicaciones con React Native",
+        overview:
+          "Trakkon es una aplicación móvil para servicios médicos de emergencia y operaciones de equipos médicos duraderos (DME), con flujos de trabajo para llamadas, equipos, usuarios, cuentas y departamentos.",
+        roleLabel: "Rol",
+        role: "Desarrollador React Native / Frontend",
+        stackLabel: "Tecnologías principales",
+        challengeTitle: "El desafío",
+        challenge:
+          "Mejorar la confiabilidad de una aplicación existente mientras se mantienen los flujos operativos, el acceso basado en roles y las configuraciones separadas para cada cliente.",
+        contributionsTitle: "Contribuciones principales",
+        contributions: [
+          {
+            title: "Estabilidad de la aplicación",
+            description:
+              "Investigué y corregí errores, mejoré flujos existentes y resolví comportamientos inconsistentes de la interfaz mediante desarrollo basado en tickets.",
+          },
+          {
+            title: "Permisos basados en roles",
+            description:
+              "Amplié las verificaciones de permisos existentes para controlar el acceso a acciones según los roles de usuario y las asignaciones de llamadas.",
+          },
+          {
+            title: "Formularios dinámicos",
+            description:
+              "Mejoré la validación de campos obligatorios en cinco tipos de llamada, incluido el reinicio de errores de validación al cambiar entre tipos.",
+          },
+          {
+            title: "Soporte para múltiples clientes",
+            description:
+              "Di soporte a las configuraciones de Trakkon y Chesed of Flatbush (COF) desde una base de código móvil compartida.",
+          },
+          {
+            title: "Entrega móvil",
+            description:
+              "Generé compilaciones APK de Android para QA, preparé compilaciones de iOS para TestFlight y participé en los flujos de lanzamiento para Android e iOS.",
+          },
+        ],
+        highlightLabel: "DESTACADO TÉCNICO",
+        highlightTitle: "Consistencia de datos en el backend",
+        highlight:
+          "Implementé una corrección en una consulta de la API Laravel que agrupó estados alternativos de equipos dentro del filtro de cuenta, preservando la condición prevista para limitar los datos por cuenta.",
+        outcomeTitle: "Resultado",
+        outcome:
+          "Contribuí a lograr flujos de aplicación más consistentes, corregí defectos reportados y apoyé la entrega de QA y lanzamientos en múltiples configuraciones de clientes.",
+        technologiesTitle: "Tecnologías",
+        technologies: [
+          "React Native",
+          "TypeScript",
+          "Expo / EAS",
+          "Expo Router",
+          "Zustand",
+          "React Hook Form",
+          "Laravel",
+          "PHP",
+          "REST API",
+        ],
+      },
       view_certificate: "Ver certificado",
       view_repo: "Ver Repositorio",
       whatsapp_cta: "¡Hablemos!",

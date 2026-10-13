@@ -9,6 +9,8 @@ import {
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTranslation } from "react-i18next";
+import { Link as RouterLink } from "react-router-dom";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 
 const ProjectCardsSection = ({ title, projects }) => {
   const { t } = useTranslation();
@@ -83,23 +85,42 @@ const ProjectCardsSection = ({ title, projects }) => {
                   {t(project.description)}
                 </Typography>
                 <Box sx={{ display: "flex", gap: 2, mt: 1 }}>
-                  <Button
-                    variant="text"
-                    size="small"
-                    href={project.repoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      color: "white",
-                      "&:hover": {
-                        textDecoration: "underline",
-                        backgroundColor: "transparent",
-                      },
-                    }}
-                    startIcon={<GitHubIcon />}
-                  >
-                    {t("view_repo")}
-                  </Button>
+                  {project.caseStudyPath ? (
+                    <Button
+                      component={RouterLink}
+                      to={project.caseStudyPath}
+                      variant="text"
+                      size="small"
+                      sx={{
+                        color: "white",
+                        "&:hover": {
+                          textDecoration: "underline",
+                          backgroundColor: "transparent",
+                        },
+                      }}
+                      startIcon={<ArticleOutlinedIcon />}
+                    >
+                      {t("case_study.cta")}
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="text"
+                      size="small"
+                      href={project.repoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        color: "white",
+                        "&:hover": {
+                          textDecoration: "underline",
+                          backgroundColor: "transparent",
+                        },
+                      }}
+                      startIcon={<GitHubIcon />}
+                    >
+                      {t("view_repo")}
+                    </Button>
+                  )}
                   <Button
                     variant="text"
                     size="small"
@@ -150,6 +171,22 @@ const ProjectCardsSection = ({ title, projects }) => {
                 ))}
               </Stack>
             </Box>
+            {project.caseStudyPath && (
+              <Button
+                component={RouterLink}
+                to={project.caseStudyPath}
+                startIcon={<ArticleOutlinedIcon />}
+                sx={{
+                  display: "none",
+                  mt: 1,
+                  px: 0,
+                  "@media (hover: none)": { display: "inline-flex" },
+                }}
+                aria-label={t("case_study.ctaFor", { project: project.title })}
+              >
+                {t("case_study.cta")}
+              </Button>
+            )}
           </Grid>
         ))}
       </Grid>

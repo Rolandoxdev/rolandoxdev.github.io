@@ -25,6 +25,7 @@ const projects = [
     type: "mobile",
     description: "Trakkon_description",
     repoLink: "",
+    caseStudyPath: "/projects/trakkon",
     liveLink: "https://apps.apple.com/app/chesed-of-flatbush/id6760507798",
     image: trakkonApp,
     logo: trakkonLogo,

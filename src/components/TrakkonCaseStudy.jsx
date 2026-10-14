@@ -9,12 +9,13 @@ import {
   Divider,
   Grid,
   Link,
-  Paper,
   Stack,
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
+import trakkonApp from "../assets/images/trakkon_project.jpg";
+import trakkonLogo from "../assets/images/trakkon-logo.svg";
 
 const TrakkonCaseStudy = () => {
   const { t } = useTranslation();
@@ -45,16 +46,36 @@ const TrakkonCaseStudy = () => {
           {t("case_study.backToProjects")}
         </Link>
 
-        <Grid container spacing={{ xs: 4, md: 8 }} alignItems="center">
+        <Grid container spacing={{ xs: 4, md: 7 }} alignItems="flex-start">
           <Grid item xs={12} md={7}>
-            <Typography
-              variant="overline"
-              color="secondary.dark"
-              fontWeight={700}
-              letterSpacing="0.12em"
-            >
-              {t("case_study.eyebrow")}
-            </Typography>
+            <Stack direction="row" alignItems="center" spacing={1.5}>
+              <Box
+                sx={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: 48,
+                  height: 48,
+                  borderRadius: 2,
+                  bgcolor: "primary.main",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={trakkonLogo}
+                  alt=""
+                  aria-hidden="true"
+                  sx={{ width: 30, height: 30 }}
+                />
+              </Box>
+              <Typography
+                variant="overline"
+                color="secondary.dark"
+                fontWeight={700}
+                letterSpacing="0.12em"
+              >
+                {t("case_study.eyebrow")}
+              </Typography>
+            </Stack>
             <Typography
               id="trakkon-title"
               component="h1"
@@ -69,168 +90,141 @@ const TrakkonCaseStudy = () => {
               Trakkon
             </Typography>
             <Typography
-              variant="h5"
-              color="text.primary"
-              fontWeight={500}
-              sx={{ fontSize: { xs: "1.15rem", md: "1.4rem" } }}
-            >
-              {t("case_study.subtitle")}
-            </Typography>
-            <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mt: 3, maxWidth: 650, lineHeight: 1.8 }}
             >
               {t("case_study.overview")}
             </Typography>
-          </Grid>
-
-          <Grid item xs={12} md={5}>
-            <Paper
-              variant="outlined"
-              sx={{ p: { xs: 3, md: 4 }, borderRadius: 3, bgcolor: "white" }}
-            >
+            <Divider sx={{ my: 2.5 }} />
+            <Box>
               <Typography variant="overline" color="text.secondary">
                 {t("case_study.roleLabel")}
               </Typography>
-              <Typography variant="h6" fontWeight={600} sx={{ mb: 3 }}>
+              <Typography variant="body1" fontWeight={600}>
                 {t("case_study.role")}
               </Typography>
-              <Typography variant="overline" color="text.secondary">
-                {t("case_study.stackLabel")}
-              </Typography>
-              <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap" sx={{ mt: 1 }}>
-                {[
-                  "React Native",
-                  "TypeScript",
-                  "Expo",
-                  "Zustand",
-                  "React Hook Form",
-                  "Laravel",
-                  "REST API",
-                ].map((technology) => (
-                  <Chip key={technology} label={technology} size="small" />
-                ))}
-              </Stack>
-            </Paper>
-          </Grid>
-        </Grid>
-
-        <Divider sx={{ my: { xs: 6, md: 8 } }} />
-
-        <Grid container spacing={{ xs: 2, md: 6 }}>
-          <Grid item xs={12} md={3}>
-            <Typography variant="h5" component="h2" fontWeight={600}>
-              {t("case_study.challengeTitle")}
+            </Box>
+            <Divider sx={{ my: 2.5, maxWidth: 620 }} />
+            <Typography variant="overline" color="text.secondary">
+              {t("case_study.technologiesTitle")}
             </Typography>
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{ lineHeight: 1.8, maxWidth: 760 }}
+            <Stack
+              direction="row"
+              spacing={1}
+              useFlexGap
+              flexWrap="wrap"
+              sx={{ mt: 1.5, maxWidth: 650 }}
             >
-              {t("case_study.challenge")}
-            </Typography>
+              {technologies.map((technology) => (
+                <Chip
+                  key={technology}
+                  label={technology}
+                  size="small"
+                  variant="outlined"
+                />
+              ))}
+            </Stack>
+          </Grid>
+
+          <Grid item xs={12} md={5}>
+            <Box component="figure" sx={{ m: 0 }}>
+              <Box
+                sx={{
+                  width: "100%",
+                  aspectRatio: "1 / 1",
+                  borderRadius: 3,
+                  bgcolor: "#EEF2F3",
+                  overflow: "hidden",
+                  display: "grid",
+                  placeItems: "center",
+                }}
+              >
+                <Box
+                  component="img"
+                  src={trakkonApp}
+                  alt={t("case_study.imageAlt")}
+                  sx={{ width: "100%", height: "100%", objectFit: "contain" }}
+                />
+              </Box>
+            </Box>
           </Grid>
         </Grid>
+
+        {/* <Divider sx={{ my: { xs: 6, md: 8 } }} /> */}
 
         <Box sx={{ mt: { xs: 6, md: 8 } }}>
-          <Typography variant="h5" component="h2" fontWeight={600} sx={{ mb: 3 }}>
+          <Typography
+            variant="h5"
+            component="h2"
+            fontWeight={600}
+            sx={{ mb: 1.5 }}
+          >
             {t("case_study.contributionsTitle")}
           </Typography>
-          <Grid container spacing={2}>
+          <Grid container columnSpacing={{ xs: 0, md: 4 }}>
             {contributions.map((contribution, index) => (
               <Grid item xs={12} md={6} key={contribution.title}>
-                <Paper
-                  variant="outlined"
+                <Box
+                  component="article"
                   sx={{
+                    display: "grid",
+                    gridTemplateColumns: "2.25rem minmax(0, 1fr)",
+                    gap: 1.5,
                     height: "100%",
-                    p: { xs: 2.5, md: 3 },
-                    borderRadius: 3,
-                    bgcolor: "white",
+                    py: 2.5,
+                    borderTop: "1px solid",
+                    borderColor: "divider",
                   }}
                 >
                   <Typography
                     variant="overline"
-                    color="secondary.dark"
+                    color="primary.main"
                     fontWeight={700}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </Typography>
-                  <Typography variant="h6" fontWeight={600} sx={{ mt: 0.5, mb: 1 }}>
-                    {contribution.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.75 }}>
-                    {contribution.description}
-                  </Typography>
-                </Paper>
+                  <Box>
+                    <Typography
+                      variant="h6"
+                      fontWeight={600}
+                      sx={{ mt: 0.25, mb: 0.75, lineHeight: 1.35 }}
+                    >
+                      {contribution.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ lineHeight: 1.75 }}
+                    >
+                      {contribution.description}
+                    </Typography>
+                  </Box>
+                </Box>
               </Grid>
             ))}
           </Grid>
         </Box>
 
-        <Paper
-          variant="outlined"
+        <Box
           sx={{
             mt: { xs: 5, md: 7 },
             p: { xs: 3, md: 4 },
-            borderRadius: 3,
-            bgcolor: "rgba(67, 197, 158, 0.08)",
+            borderLeft: "4px solid",
             borderColor: "secondary.main",
+            bgcolor: "rgba(67, 197, 158, 0.08)",
           }}
         >
-          <Typography
-            variant="overline"
-            color="primary.main"
-            fontWeight={700}
-            letterSpacing="0.1em"
-          >
-            {t("case_study.highlightLabel")}
-          </Typography>
-          <Typography variant="h5" component="h2" fontWeight={600} sx={{ mt: 0.5 }}>
-            {t("case_study.highlightTitle")}
+          <Typography variant="overline" color="primary.main" fontWeight={700}>
+            {t("case_study.outcomeTitle")}
           </Typography>
           <Typography
             variant="body1"
             color="text.secondary"
-            sx={{ mt: 1.5, maxWidth: 850, lineHeight: 1.8 }}
+            sx={{ mt: 0.75, maxWidth: 900, lineHeight: 1.8 }}
           >
-            {t("case_study.highlight")}
+            {t("case_study.outcome")}
           </Typography>
-        </Paper>
-
-        <Grid container spacing={{ xs: 2, md: 6 }} sx={{ mt: { xs: 4, md: 6 } }}>
-          <Grid item xs={12} md={3}>
-            <Typography variant="h5" component="h2" fontWeight={600}>
-              {t("case_study.outcomeTitle")}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              sx={{ lineHeight: 1.8, maxWidth: 760 }}
-            >
-              {t("case_study.outcome")}
-            </Typography>
-          </Grid>
-        </Grid>
-
-        <Box sx={{ mt: { xs: 5, md: 7 } }}>
-          <Typography variant="h6" component="h2" fontWeight={600} sx={{ mb: 2 }}>
-            {t("case_study.technologiesTitle")}
-          </Typography>
-          <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-            {technologies.map((technology) => (
-              <Chip
-                key={technology}
-                label={technology}
-                variant="outlined"
-                sx={{ bgcolor: "background.paper" }}
-              />
-            ))}
-          </Stack>
         </Box>
 
         <Link

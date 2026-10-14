@@ -38,30 +38,32 @@ const resources = {
         backToProjects: "Back to Projects",
         eyebrow: "MOBILE APPLICATION CASE STUDY",
         subtitle: "React Native Application Development",
+        imageAlt:
+          "Chesed of Flatbush sign-in screen displayed in a mobile device mockup",
+        imageCaption: "Chesed of Flatbush client configuration",
         overview:
-          "Trakkon is a mobile application for emergency medical services and durable medical equipment (DME) operations, supporting workflows for calls, equipment, users, accounts, and departments.",
+          "Trakkon is a mobile application for emergency medical services and durable medical equipment (DME) operations. It supports workflows for calls, equipment, users, accounts, and departments.",
         roleLabel: "Role",
         role: "React Native / Frontend Developer",
-        stackLabel: "Core stack",
         challengeTitle: "The Challenge",
         challenge:
-          "Improve the reliability of an existing application while maintaining operational workflows, role-based access, and separate client configurations.",
+          "Improve the reliability of an existing mobile application, refine operational workflows, and support testing and releases across multiple client configurations.",
         contributionsTitle: "Key Contributions",
         contributions: [
           {
-            title: "Application stability",
+            title: "Application reliability",
             description:
-              "Investigated and fixed bugs, improved existing workflows, and addressed inconsistent UI behavior through ticket-based development.",
+              "Investigated and fixed reported bugs, using ticket-based development and beta-tester feedback to improve existing workflows.",
           },
           {
-            title: "Role-based permissions",
+            title: "Role-based access and dynamic forms",
             description:
-              "Extended existing permission checks to control access to actions based on user roles and call assignments.",
+              "Extended existing permission checks for user roles and call assignments, and improved required-field validation across five call types, clearing validation errors when users switched types.",
           },
           {
-            title: "Dynamic forms",
+            title: "Backend data consistency",
             description:
-              "Improved required-field validation across five call types, including resetting validation errors when users switch between types.",
+              "Fixed a Laravel API query so alternative equipment-status conditions remained correctly scoped to the selected account.",
           },
           {
             title: "Multi-client support",
@@ -69,18 +71,14 @@ const resources = {
               "Supported Trakkon and Chesed of Flatbush (COF) configurations from a shared mobile codebase.",
           },
           {
-            title: "Mobile delivery",
+            title: "Mobile delivery and OTA updates",
             description:
-              "Generated Android APK builds for QA, prepared iOS builds for TestFlight, and participated in Android and iOS release workflows.",
+              "Generated Android APK builds for QA, prepared iOS builds for TestFlight, participated in Android and iOS release workflows, and supported over-the-air (OTA) updates.",
           },
         ],
-        highlightLabel: "TECHNICAL HIGHLIGHT",
-        highlightTitle: "Backend data consistency",
-        highlight:
-          "Implemented a Laravel API query fix that grouped alternative equipment statuses within the account filter, preserving the intended account-scoping condition.",
         outcomeTitle: "Outcome",
         outcome:
-          "Contributed to more consistent application workflows, corrected reported defects, and supported QA and release delivery across multiple client configurations.",
+          "The project progressed from beta testing and workflow improvements to operational adoption. Working alongside beta testers, the team identified and resolved defects, imported call and equipment records with their statuses and history, and released app versions through the app stores. Users then began transitioning their day-to-day workflows from ClickUp to Trakkon.",
         technologiesTitle: "Technologies",
         technologies: [
           "React Native",
@@ -151,30 +149,32 @@ const resources = {
         backToProjects: "Volver a proyectos",
         eyebrow: "CASO DE ESTUDIO DE APLICACIÓN MÓVIL",
         subtitle: "Desarrollo de aplicaciones con React Native",
+        imageAlt:
+          "Pantalla de inicio de sesión de Chesed of Flatbush en un dispositivo móvil",
+        imageCaption: "Configuración del cliente Chesed of Flatbush",
         overview:
-          "Trakkon es una aplicación móvil para servicios médicos de emergencia y operaciones de equipos médicos duraderos (DME), con flujos de trabajo para llamadas, equipos, usuarios, cuentas y departamentos.",
+          "Trakkon es una aplicación móvil para operaciones de servicios médicos de emergencia y equipos médicos duraderos (DME). Facilita flujos de trabajo de llamadas, equipos, usuarios, cuentas y departamentos.",
         roleLabel: "Rol",
         role: "Desarrollador React Native / Frontend",
-        stackLabel: "Tecnologías principales",
         challengeTitle: "El desafío",
         challenge:
-          "Mejorar la confiabilidad de una aplicación existente mientras se mantienen los flujos operativos, el acceso basado en roles y las configuraciones separadas para cada cliente.",
+          "Mejorar la confiabilidad de una aplicación móvil existente, perfeccionar los flujos operativos y apoyar las pruebas y los lanzamientos en distintas configuraciones de clientes.",
         contributionsTitle: "Contribuciones principales",
         contributions: [
           {
-            title: "Estabilidad de la aplicación",
+            title: "Confiabilidad de la aplicación",
             description:
-              "Investigué y corregí errores, mejoré flujos existentes y resolví comportamientos inconsistentes de la interfaz mediante desarrollo basado en tickets.",
+              "Investigué y corregí errores reportados. Mediante desarrollo basado en tickets y comentarios de quienes probaron la versión beta, contribuí a mejorar los flujos existentes.",
           },
           {
-            title: "Permisos basados en roles",
+            title: "Acceso por roles y formularios dinámicos",
             description:
-              "Amplié las verificaciones de permisos existentes para controlar el acceso a acciones según los roles de usuario y las asignaciones de llamadas.",
+              "Amplié las verificaciones de permisos existentes para roles de usuario y asignaciones de llamadas, y mejoré la validación de campos obligatorios en cinco tipos de llamada, reiniciando los errores de validación al cambiar de tipo.",
           },
           {
-            title: "Formularios dinámicos",
+            title: "Consistencia de datos en el backend",
             description:
-              "Mejoré la validación de campos obligatorios en cinco tipos de llamada, incluido el reinicio de errores de validación al cambiar entre tipos.",
+              "Corregí una consulta de la API de Laravel para mantener las condiciones alternativas de estado del equipo dentro del filtro de la cuenta seleccionada.",
           },
           {
             title: "Soporte para múltiples clientes",
@@ -182,18 +182,14 @@ const resources = {
               "Di soporte a las configuraciones de Trakkon y Chesed of Flatbush (COF) desde una base de código móvil compartida.",
           },
           {
-            title: "Entrega móvil",
+            title: "Entrega móvil y actualizaciones OTA",
             description:
-              "Generé compilaciones APK de Android para QA, preparé compilaciones de iOS para TestFlight y participé en los flujos de lanzamiento para Android e iOS.",
+              "Generé compilaciones APK de Android para QA, preparé compilaciones de iOS para TestFlight, participé en los flujos de lanzamiento de Android e iOS y di soporte a actualizaciones OTA.",
           },
         ],
-        highlightLabel: "DESTACADO TÉCNICO",
-        highlightTitle: "Consistencia de datos en el backend",
-        highlight:
-          "Implementé una corrección en una consulta de la API Laravel que agrupó estados alternativos de equipos dentro del filtro de cuenta, preservando la condición prevista para limitar los datos por cuenta.",
         outcomeTitle: "Resultado",
         outcome:
-          "Contribuí a lograr flujos de aplicación más consistentes, corregí defectos reportados y apoyé la entrega de QA y lanzamientos en múltiples configuraciones de clientes.",
+          "El proyecto pasó de las pruebas beta y la mejora de flujos de trabajo a la adopción operativa. Junto con quienes probaron la versión beta, el equipo identificó y corrigió defectos, importó registros de llamadas y equipos con sus estados e historial, y publicó versiones en las tiendas de aplicaciones. Después, los usuarios comenzaron a trasladar sus flujos de trabajo diarios de ClickUp a Trakkon.",
         technologiesTitle: "Tecnologías",
         technologies: [
           "React Native",

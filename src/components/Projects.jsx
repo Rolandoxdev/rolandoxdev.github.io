@@ -16,6 +16,8 @@ import expoLogo from "../assets/images/logos/expo.svg";
 import trakkonApp from "../assets/images/trakkon_project.jpg";
 import trakkonLogo from "../assets/images/trakkon-logo.svg";
 import alltixWeb from "../assets/images/alltix_website.jpg";
+import tikimayastore from "../assets/images/tikimayastore_website.jpg";
+import tikimayalogo from "../assets/images/tikimaya_logo.svg";
 import ProjectCardsSection from "./ProjectCardsSection";
 
 const projects = [
@@ -25,6 +27,7 @@ const projects = [
     type: "mobile",
     description: "Trakkon_description",
     repoLink: "",
+    caseStudyPath: "/projects/trakkon",
     liveLink: "https://apps.apple.com/app/chesed-of-flatbush/id6760507798",
     image: trakkonApp,
     logo: trakkonLogo,
@@ -39,6 +42,7 @@ const projects = [
     title: "Reco App",
     type: "mobile",
     description: "RecoApp_description",
+    caseStudyPath: "/projects/reco",
     repoLink: "https://github.com/orellanamr/reco-app",
     liveLink: "https://play.google.com/store/apps/details?id=gt.com.reco.app",
     image: RecoApp,
@@ -49,21 +53,21 @@ const projects = [
       { name: "Expo", logo: expoLogo },
     ],
   },
-  {
-    id: 3,
-    title: "Superheroes App",
-    type: "mobile",
-    description: "Superheroes_description",
-    repoLink: "https://github.com/orellanamr/startrackheroes-app",
-    liveLink: "",
-    image: heroesApp,
-    logo: superHero,
-    technologies: [
-      { name: "React Native", logo: reactLogo },
-      { name: "Redux", logo: reduxLogo },
-      { name: "Expo", logo: expoLogo },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: "Superheroes App",
+  //   type: "mobile",
+  //   description: "Superheroes_description",
+  //   repoLink: "https://github.com/orellanamr/startrackheroes-app",
+  //   liveLink: "",
+  //   image: heroesApp,
+  //   logo: superHero,
+  //   technologies: [
+  //     { name: "React Native", logo: reactLogo },
+  //     { name: "Redux", logo: reduxLogo },
+  //     { name: "Expo", logo: expoLogo },
+  //   ],
+  // },
   // {
   //   id: 3,
   //   title: "Focus Time",
@@ -110,8 +114,23 @@ const projects = [
       { name: "Git", logo: gitLogo },
     ],
   },
-  {
+      {
     id: 6,
+    title: "TikiMaya Store",
+    type: "web",
+    description: "TikiMaya_description",
+    repoLink: "https://github.com/Rolandoxdev/tikiMayaStore",
+    liveLink: "https://tikimayastore.vercel.app/",
+    image: tikimayastore,
+    logo: tikimayalogo,
+    technologies: [
+      { name: "React", logo: reactLogo },
+      { name: "Material UI", logo: materialUILogo },
+      { name: "Git", logo: gitLogo },
+    ],
+  },
+  {
+    id: 7,
     title: "Alltix",
     type: "web",
     description: "Alltix_description",

@@ -40,6 +40,12 @@ const Footer = () => {
             <Grid item key={index}>
               <Link
                 href={`#${section}`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  document
+                    .getElementById(section)
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 underline="hover"
                 color="inherit"
                 sx={{ fontSize: "1rem" }}

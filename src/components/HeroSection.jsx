@@ -122,8 +122,8 @@ const HeroSection = () => {
         >
           <ReactTypingEffect
             text={[
-              t("hero.title.innovative"),
               t("hero.title.creative"),
+              t("hero.title.innovative"),
               t("hero.title.passionate"),
             ]}
             speed={60}

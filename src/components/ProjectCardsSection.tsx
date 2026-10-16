@@ -85,30 +85,13 @@ const ProjectCardsSection = ({ title, projects }) => {
                   {t(project.description)}
                 </Typography>
                 <Box sx={{ display: "flex", gap: 2, mt: 1 }}>
-                  {project.caseStudyPath ? (
+                  {project.repoLink && (
                     <Button
-                      component={RouterLink}
-                      to={project.caseStudyPath}
-                      variant="text"
-                      size="small"
-                      sx={{
-                        color: "white",
-                        "&:hover": {
-                          textDecoration: "underline",
-                          backgroundColor: "transparent",
-                        },
-                      }}
-                      startIcon={<ArticleOutlinedIcon />}
-                    >
-                      {t("case_study.cta")}
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="text"
-                      size="small"
                       href={project.repoLink}
                       target="_blank"
                       rel="noopener noreferrer"
+                      variant="text"
+                      size="small"
                       sx={{
                         color: "white",
                         "&:hover": {
@@ -141,51 +124,60 @@ const ProjectCardsSection = ({ title, projects }) => {
                 </Box>
               </Box>
             </Card>
-            <Box sx={{ mt: 2 }}>
-              <Stack direction="row" spacing={1}>
-                {project.technologies.map((tech, index) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 1,
-                      border: "1px solid #ccc",
-                      borderRadius: "16px",
-                      padding: "4px 8px",
-                      transition: "all 0.3s ease-in-out",
-                      "&:hover": {
-                        borderColor: "#00DA94",
-                        backgroundColor: "rgba(0, 218, 148, 0.1)",
-                        transform: "scale(1.05)",
-                      },
-                    }}
-                  >
-                    <img
-                      src={tech.logo}
-                      alt={tech.name}
-                      style={{ width: "20px", height: "20px" }}
-                    />
-                    <Typography variant="body2">{tech.name}</Typography>
-                  </Box>
-                ))}
-              </Stack>
-            </Box>
-            {project.caseStudyPath && (
+            {project.type === "mobile" && project.caseStudyPath ? (
               <Button
                 component={RouterLink}
                 to={project.caseStudyPath}
+                variant="outlined"
+                size="small"
                 startIcon={<ArticleOutlinedIcon />}
                 sx={{
-                  display: "none",
-                  mt: 1,
-                  px: 0,
-                  "@media (hover: none)": { display: "inline-flex" },
+                  mt: 2,
+                  color: "black",
+                  borderColor: "black",
+                  borderRadius: 12,
+                  width: "100%",
+                  "&:hover": {
+                    backgroundColor: "black",
+                    borderColor: "black",
+                    color: "white",
+                  },
                 }}
                 aria-label={t("case_study.ctaFor", { project: project.title })}
               >
                 {t("case_study.cta")}
               </Button>
+            ) : (
+              <Box sx={{ mt: 2 }}>
+                <Stack direction="row" spacing={1}>
+                  {project.technologies.map((tech, index) => (
+                    <Box
+                      key={index}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                        border: "1px solid #ccc",
+                        borderRadius: "16px",
+                        padding: "4px 8px",
+                        transition: "all 0.3s ease-in-out",
+                        "&:hover": {
+                          borderColor: "#00DA94",
+                          backgroundColor: "rgba(0, 218, 148, 0.1)",
+                          transform: "scale(1.05)",
+                        },
+                      }}
+                    >
+                      <img
+                        src={tech.logo}
+                        alt={tech.name}
+                        style={{ width: "20px", height: "20px" }}
+                      />
+                      <Typography variant="body2">{tech.name}</Typography>
+                    </Box>
+                  ))}
+                </Stack>
+              </Box>
             )}
           </Grid>
         ))}

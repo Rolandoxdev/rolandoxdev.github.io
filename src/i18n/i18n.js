@@ -9,13 +9,13 @@ const resources = {
       hero: {
         name: "Rolando Orellana",
         title: {
-          creative: "Creativity",
+          creative: "Designer",
           developer: "Developer",
-          innovative: "Innovation",
-          passionate: "Strategy",
+          innovative: "Innovator",
+          passionate: "Strategist",
         },
         description:
-          "React Native Developer with 2.5+ years of experience building and shipping production-ready mobile apps using React Native, Redux Toolkit, and REST APIs, including multi-tenant architectures and App Store releases.",
+          "React Native Developer with 3 years of experience building and shipping production-ready mobile apps using React Native, Redux Toolkit, and REST APIs, including multi-tenant architectures and App Store releases.",
         scrollDown: "Scroll Down",
       },
 
@@ -33,7 +33,7 @@ const resources = {
       projects: "Projects",
       certifications: "Certifications",
       case_study: {
-        cta: "Case Study",
+        cta: "View Case Study",
         ctaFor: "View the {{project}} case study",
         backToProjects: "Back to Projects",
         eyebrow: "MOBILE APPLICATION CASE STUDY",
@@ -42,43 +42,43 @@ const resources = {
           "Chesed of Flatbush sign-in screen displayed in a mobile device mockup",
         imageCaption: "Chesed of Flatbush client configuration",
         overview:
-          "Trakkon is a mobile application for emergency medical services and durable medical equipment (DME) operations. It supports workflows for calls, equipment, users, accounts, and departments.",
+          "Multi-tenant React Native application for emergency medical services and durable medical equipment (DME) operations. Developed for an organization based in Brooklyn, NY, it supports calls, equipment, users, accounts, and departments through a shared codebase designed to accommodate multiple client configurations. I contributed to core features, UX improvements, REST API integration, backend fixes, and production delivery across iOS and Android.",
         roleLabel: "Role",
-        role: "React Native / Frontend Developer",
+        role: "React Native Developer | Frontend | Backend Contributions",
         challengeTitle: "The Challenge",
         challenge:
           "Improve the reliability of an existing mobile application, refine operational workflows, and support testing and releases across multiple client configurations.",
         contributionsTitle: "Key Contributions",
         contributions: [
           {
-            title: "Application reliability",
+            title: "Application stability and workflow improvements",
             description:
-              "Investigated and fixed reported bugs, using ticket-based development and beta-tester feedback to improve existing workflows.",
+              "Investigated and resolved reported bugs, refined existing workflows, and incorporated feedback from QA and beta testers.",
           },
           {
-            title: "Role-based access and dynamic forms",
+            title: "Backend development and API fixes",
             description:
-              "Extended existing permission checks for user roles and call assignments, and improved required-field validation across five call types, clearing validation errors when users switched types.",
+              "Worked on QA-reported Laravel tickets for call creation and editing, assignments, manager permissions, and department access. Fixed an equipment query to scope alternative statuses to the selected account, and contributed to CSV imports using Laravel Artisan commands.",
           },
           {
-            title: "Backend data consistency",
+            title: "Dynamic forms and role-based access",
             description:
-              "Fixed a Laravel API query so alternative equipment-status conditions remained correctly scoped to the selected account.",
+              "Extended existing permission checks and improved required-field validation across five call types, including resetting validation errors when users switched types.",
           },
           {
-            title: "Multi-client support",
+            title: "Multi-client configuration and delivery",
             description:
-              "Supported Trakkon and Chesed of Flatbush (COF) configurations from a shared mobile codebase.",
+              "Supported Trakkon and Chesed of Flatbush (COF) configurations in a shared React Native codebase. Used Expo EAS build profiles and client-specific environment variables to produce distinct builds.",
           },
           {
-            title: "Mobile delivery and OTA updates",
+            title: "App store releases and OTA updates",
             description:
-              "Generated Android APK builds for QA, prepared iOS builds for TestFlight, participated in Android and iOS release workflows, and supported over-the-air (OTA) updates.",
+              "Managed iOS and Android store tasks: uploads, listings, metadata, screenshots, and rejection resolution. Prepared Android QA APKs and iOS TestFlight builds, participated in releases, and supported OTA updates.",
           },
         ],
         outcomeTitle: "Outcome",
         outcome:
-          "The project progressed from beta testing and workflow improvements to operational adoption. Working alongside beta testers, the team identified and resolved defects, imported call and equipment records with their statuses and history, and released app versions through the app stores. Users then began transitioning their day-to-day workflows from ClickUp to Trakkon.",
+          "My contributions helped move the application from beta testing toward operational use. I worked on resolving defects identified through QA and beta testing, supported the import of call and equipment records with their statuses and history, and managed app-store submissions and releases across iOS and Android. As the application rolled out, users began transitioning their day-to-day workflows from ClickUp to Trakkon.",
         technologiesTitle: "Technologies",
         technologies: [
           "React Native",
@@ -113,6 +113,8 @@ const resources = {
         "FocusTime is a productivity app built with React Native and Expo. The app is cross-platform, leveraging hooks for state management and Git for version control.",
       Alltix_description:
         "Responsive landing page (React + Material UI) for a Brooklyn, NY client, focused on clean UI and conversion-driven UX.",
+      TikiMaya_description:
+        "This is a store built using React and Material UI. Its landing page showcases products and gift sets through a modern, responsive design, with a focus on facilitating purchases via WhatsApp.",
     },
   },
   es: {
@@ -121,13 +123,13 @@ const resources = {
       hero: {
         name: "Rolando Orellana",
         title: {
-          creative: "Creatividad",
+          creative: "Designer",
           developer: "Developer",
-          innovative: "Innovación",
-          passionate: "Apasionado",
+          innovative: "Innovator",
+          passionate: "Strategist",
         },
         description:
-          "Desarrollador React Native con 2.5+ años de experiencia construyendo y lanzando aplicaciones móviles en producción. Especializado en arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
+          "Desarrollador React Native con 3 años de experiencia construyendo y lanzando aplicaciones móviles en producción. Construyendo arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
         scrollDown: "Deslizar hacia abajo",
       },
       // General
@@ -144,7 +146,7 @@ const resources = {
       projects: "Proyectos",
       certifications: "Certificaciones",
       case_study: {
-        cta: "Caso de estudio",
+        cta: "Ver caso de estudio",
         ctaFor: "Ver el caso de estudio de {{project}}",
         backToProjects: "Volver a proyectos",
         eyebrow: "CASO DE ESTUDIO DE APLICACIÓN MÓVIL",
@@ -153,43 +155,43 @@ const resources = {
           "Pantalla de inicio de sesión de Chesed of Flatbush en un dispositivo móvil",
         imageCaption: "Configuración del cliente Chesed of Flatbush",
         overview:
-          "Trakkon es una aplicación móvil para operaciones de servicios médicos de emergencia y equipos médicos duraderos (DME). Facilita flujos de trabajo de llamadas, equipos, usuarios, cuentas y departamentos.",
+          "Aplicación multi-tenant de React Native para operaciones de servicios médicos de emergencia y equipos médicos duraderos (DME). Destinada a una organización con sede en Brooklyn, NY, permite gestionar llamadas, equipos, usuarios, cuentas y departamentos desde una base de código compartida, preparada para distintas configuraciones de clientes. Contribuí a funcionalidades principales, mejoras de UX, integración con API REST, correcciones backend y entregas de producción para iOS y Android.",
         roleLabel: "Rol",
-        role: "Desarrollador React Native / Frontend",
+        role: "Desarrollador React Native | Frontend | Contribuciones Backend",
         challengeTitle: "El desafío",
         challenge:
           "Mejorar la confiabilidad de una aplicación móvil existente, perfeccionar los flujos operativos y apoyar las pruebas y los lanzamientos en distintas configuraciones de clientes.",
         contributionsTitle: "Contribuciones principales",
         contributions: [
           {
-            title: "Confiabilidad de la aplicación",
+            title: "Estabilidad de la aplicación y mejoras de flujos",
             description:
-              "Investigué y corregí errores reportados. Mediante desarrollo basado en tickets y comentarios de quienes probaron la versión beta, contribuí a mejorar los flujos existentes.",
+              "Investigué y resolví errores reportados, refiné flujos existentes e incorporé comentarios de QA y beta testers.",
           },
           {
-            title: "Acceso por roles y formularios dinámicos",
+            title: "Desarrollo backend y correcciones de API",
             description:
-              "Amplié las verificaciones de permisos existentes para roles de usuario y asignaciones de llamadas, y mejoré la validación de campos obligatorios en cinco tipos de llamada, reiniciando los errores de validación al cambiar de tipo.",
+              "Trabajé en tickets de Laravel reportados por QA sobre creación y edición de llamadas, asignaciones, permisos de gerencia y acceso por departamento. Corregí una consulta de equipos para limitar estados alternativos a la cuenta seleccionada y contribuí a importaciones CSV con comandos Artisan de Laravel.",
           },
           {
-            title: "Consistencia de datos en el backend",
+            title: "Formularios dinámicos y acceso por roles",
             description:
-              "Corregí una consulta de la API de Laravel para mantener las condiciones alternativas de estado del equipo dentro del filtro de la cuenta seleccionada.",
+              "Amplié las verificaciones de permisos existentes y mejoré la validación de campos obligatorios en cinco tipos de llamada, reiniciando los errores de validación cuando se cambiaba de tipo.",
           },
           {
-            title: "Soporte para múltiples clientes",
+            title: "Configuración multi-cliente y entrega",
             description:
-              "Di soporte a las configuraciones de Trakkon y Chesed of Flatbush (COF) desde una base de código móvil compartida.",
+              "Di soporte a las configuraciones de Trakkon y Chesed of Flatbush (COF) en una base de código compartida de React Native. Usé perfiles de compilación de Expo EAS y variables de entorno por cliente para generar compilaciones distintas.",
           },
           {
-            title: "Entrega móvil y actualizaciones OTA",
+            title: "Lanzamientos en tiendas y actualizaciones OTA",
             description:
-              "Generé compilaciones APK de Android para QA, preparé compilaciones de iOS para TestFlight, participé en los flujos de lanzamiento de Android e iOS y di soporte a actualizaciones OTA.",
+              "Gestioné tareas en tiendas para iOS y Android: cargas, fichas, metadatos, capturas y resolución de rechazos. Preparé APK de Android para QA y compilaciones de iOS para TestFlight, participé en lanzamientos y di soporte a actualizaciones OTA.",
           },
         ],
         outcomeTitle: "Resultado",
         outcome:
-          "El proyecto pasó de las pruebas beta y la mejora de flujos de trabajo a la adopción operativa. Junto con quienes probaron la versión beta, el equipo identificó y corrigió defectos, importó registros de llamadas y equipos con sus estados e historial, y publicó versiones en las tiendas de aplicaciones. Después, los usuarios comenzaron a trasladar sus flujos de trabajo diarios de ClickUp a Trakkon.",
+          "Mis contribuciones ayudaron a llevar la aplicación desde las pruebas beta hacia el uso operativo. Trabajé en la resolución de defectos identificados por QA y durante las pruebas beta, apoyé la importación de registros de llamadas y equipos con sus estados e historial, y gestioné envíos y lanzamientos en tiendas para iOS y Android. Durante la implementación, los usuarios comenzaron a trasladar sus flujos de trabajo diarios de ClickUp a Trakkon.",
         technologiesTitle: "Tecnologías",
         technologies: [
           "React Native",
@@ -222,6 +224,8 @@ const resources = {
         "FocusTime es una app de productividad construida con React Native y Expo. Es multiplataforma y emplea hooks para el estado y Git para el control de versiones.",
       Portfolio_description:
         "Este portafolio fue construido con React.js, Vite y Material UI, cuenta con un diseño moderno, responsivo y animaciones fluidas.",
+        TikiMaya_description:
+        "Es una tienda creada con React y Material UI. Su landing page presenta productos y kits de regalo mediante un diseño moderno, adaptable y enfocado en facilitar las compras por WhatsApp.",
     },
   },
 };

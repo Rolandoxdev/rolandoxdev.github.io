@@ -1,6 +1,8 @@
 import {
   ArrowBack as ArrowBackIcon,
   ArrowForward as ArrowForwardIcon,
+  EmojiEventsOutlined as OutcomeIcon,
+  AppSettingsAltOutlined as AppSettingsAltIcon,
 } from "@mui/icons-material";
 import {
   Box,
@@ -38,15 +40,23 @@ const TrakkonCaseStudy = () => {
           component={RouterLink}
           to="/"
           state={{ scrollTo: "projects" }}
-          underline="none"
+          underline="hover"
           color="primary.main"
-          sx={{ display: "inline-flex", alignItems: "center", gap: 1, mb: 5 }}
+          sx={{
+            position: "relative",
+            zIndex: 1,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 1,
+            mb: 5,
+          }}
         >
+        
           <ArrowBackIcon fontSize="small" aria-hidden="true" />
           {t("case_study.backToProjects")}
         </Link>
 
-        <Grid container spacing={{ xs: 4, md: 7 }} alignItems="flex-start">
+        <Grid container spacing={{ xs: 4, md: 7 }} alignItems="stretch">
           <Grid item xs={12} md={7}>
             <Stack direction="row" alignItems="center" spacing={1.5}>
               <Box
@@ -83,14 +93,14 @@ const TrakkonCaseStudy = () => {
               sx={{
                 mt: 1,
                 mb: 1,
-                fontSize: { xs: "2.75rem", sm: "3.5rem", md: "4.5rem" },
+                fontSize: { xs: "2.75rem", sm: "3.5rem", md: "4rem" },
                 lineHeight: 1.08,
               }}
             >
-              Trakkon
+              Trakkon APP
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="text.secondary"
               sx={{ mt: 3, maxWidth: 650, lineHeight: 1.8 }}
             >
@@ -128,13 +138,16 @@ const TrakkonCaseStudy = () => {
           </Grid>
 
           <Grid item xs={12} md={5}>
-            <Box component="figure" sx={{ m: 0 }}>
+            <Box
+              component="figure"
+              sx={{ m: 0, height: { xs: "auto", md: "100%" } }}
+            >
               <Box
                 sx={{
                   width: "100%",
-                  aspectRatio: "1 / 1",
+                  height: { xs: "auto", md: "100%" },
+                  aspectRatio: { xs: "1 / 1", md: "auto" },
                   borderRadius: 3,
-                  bgcolor: "#EEF2F3",
                   overflow: "hidden",
                   display: "grid",
                   placeItems: "center",
@@ -144,24 +157,26 @@ const TrakkonCaseStudy = () => {
                   component="img"
                   src={trakkonApp}
                   alt={t("case_study.imageAlt")}
-                  sx={{ width: "100%", height: "100%", objectFit: "contain" }}
+                  sx={{
+                    display: "block",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
                 />
               </Box>
             </Box>
           </Grid>
         </Grid>
 
-        {/* <Divider sx={{ my: { xs: 6, md: 8 } }} /> */}
-
         <Box sx={{ mt: { xs: 6, md: 8 } }}>
-          <Typography
-            variant="h5"
-            component="h2"
-            fontWeight={600}
-            sx={{ mb: 1.5 }}
-          >
-            {t("case_study.contributionsTitle")}
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}>
+            <AppSettingsAltIcon color="primary" aria-hidden="true" />
+            <Typography variant="h5" component="h2" fontWeight={600}>
+              {t("case_study.contributionsTitle")}
+            </Typography>
+          </Box>
           <Grid container columnSpacing={{ xs: 0, md: 4 }}>
             {contributions.map((contribution, index) => (
               <Grid item xs={12} md={6} key={contribution.title}>
@@ -215,9 +230,16 @@ const TrakkonCaseStudy = () => {
             bgcolor: "rgba(67, 197, 158, 0.08)",
           }}
         >
-          <Typography variant="overline" color="primary.main" fontWeight={700}>
-            {t("case_study.outcomeTitle")}
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 0.75 }}>
+            <OutcomeIcon fontSize="small" color="primary" aria-hidden="true" />
+            <Typography
+              variant="overline"
+              color="primary.main"
+              fontWeight={700}
+            >
+              {t("case_study.outcomeTitle")}
+            </Typography>
+          </Box>
           <Typography
             variant="body1"
             color="text.secondary"

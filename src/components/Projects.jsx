@@ -42,7 +42,7 @@ const projects = [
     title: "Reco App",
     type: "mobile",
     description: "RecoApp_description",
-    caseStudyPath: "/projects/trakkon",
+    caseStudyPath: "/projects/reco",
     repoLink: "https://github.com/orellanamr/reco-app",
     liveLink: "https://play.google.com/store/apps/details?id=gt.com.reco.app",
     image: RecoApp,

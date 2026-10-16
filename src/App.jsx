@@ -12,6 +12,7 @@ import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import TrakkonCaseStudy from "./components/TrakkonCaseStudy";
+import RecoCaseStudy from "./components/RecoCaseStudy";
 import Certifications from "./components/Certifications";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
@@ -100,6 +101,7 @@ const App = () => (
     <Routes>
       <Route path="/" element={<PortfolioHome />} />
       <Route path="/projects/trakkon" element={<TrakkonCaseStudy />} />
+      <Route path="/projects/reco" element={<RecoCaseStudy />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </>

@@ -92,6 +92,47 @@ const resources = {
           "REST API",
         ],
       },
+      reco_case_study: {
+        eyebrow: "MOBILE MARKETPLACE CASE STUDY",
+        imageAlt: "Reco mobile marketplace screens displayed in device mockups",
+        role: "React Native Developer | Frontend & Product Development",
+        technologies: [
+          "React Native",
+          "TypeScript",
+          "Expo / EAS",
+          "Redux Toolkit",
+          "RTK Query",
+          "REST API",
+        ],
+        overview:
+          "Reco is a mobile services marketplace for Guatemala, designed to help people find and hire independent professionals. By bringing service discovery, bookings, and ratings together, it aims to make choosing a provider feel more trustworthy.",
+        contributionsTitle: "Key Contributions",
+        contributions: [
+          {
+            title: "Frontend development and product experience",
+            description:
+              "Led most of the React Native frontend and contributed to product, UI, and UX decisions in collaboration with the project lead.",
+          },
+          {
+            title: "API integration and state management",
+            description:
+              "Integrated backend APIs using Redux Toolkit and RTK Query, and supported local development with Postman, Docker, and environment configuration.",
+          },
+          {
+            title: "Core marketplace workflows",
+            description:
+              "Built key user-facing flows for account access, service listings, bookings and orders, chat, favorites, and ratings.",
+          },
+          {
+            title: "Android delivery and release",
+            description:
+              "Contributed to Android build preparation and the MVP's Google Play release, alongside a lead responsible for backend development.",
+          },
+        ],
+        outcomeTitle: "Outcome",
+        outcome:
+          "The MVP was published on Google Play. Later repository updates were not released to the store, and the project is pending further development. A white-label solution for organizations with similar needs is a possible future direction.",
+      },
       view_certificate: "View Certificate",
       view_repo: "View Repo",
       whatsapp_cta: "Let's Connect!",
@@ -106,7 +147,7 @@ const resources = {
       Reco_description:
         "Reco, developed in React.js with Redux and RTK Query, connects users with verified professionals. Its atomic design ensures scalability and a seamless experience.",
       RecoApp_description:
-        "Built with React Native, Expo, Redux, and RTK Query, connects users with verified professionals. Published on Google Play Store. Its atomic design ensures scalability and a seamless experience.",
+        "A React Native marketplace connecting people in Guatemala with independent service professionals. Its MVP was published on Google Play.",
       Superheroes_description:
         "Built with React Native and TypeScript for superhero team management. Implements team CRUD, biometric authentication, offline search, and favorites, using Redux Toolkit for global state, API consumption, and data persistence.",
       FocusTime_description:
@@ -205,6 +246,47 @@ const resources = {
           "REST API",
         ],
       },
+      reco_case_study: {
+        eyebrow: "CASO DE ESTUDIO DE MARKETPLACE MÓVIL",
+        imageAlt: "Pantallas del marketplace móvil Reco en dispositivos",
+        role: "Desarrollador React Native | Desarrollo frontend y de producto",
+        technologies: [
+          "React Native",
+          "TypeScript",
+          "Expo / EAS",
+          "Redux Toolkit",
+          "RTK Query",
+          "REST API",
+        ],
+        overview:
+          "Reco es un marketplace móvil de servicios en Guatemala, diseñado para ayudar a las personas a encontrar y contratar profesionales independientes. Al reunir la búsqueda de servicios, las reservas y las calificaciones, busca dar más confianza al elegir un proveedor.",
+        contributionsTitle: "Contribuciones principales",
+        contributions: [
+          {
+            title: "Desarrollo frontend y experiencia de producto",
+            description:
+              "Lideré gran parte del frontend en React Native y participé en decisiones de producto, UI y UX en colaboración con el lead del proyecto.",
+          },
+          {
+            title: "Integración de APIs y gestión de estado",
+            description:
+              "Integré APIs del backend con Redux Toolkit y RTK Query, y apoyé el desarrollo local con Postman, Docker y configuración de variables de entorno.",
+          },
+          {
+            title: "Flujos principales del marketplace",
+            description:
+              "Desarrollé flujos de cara al usuario para acceso a cuentas, publicación de servicios, reservas y órdenes, chat, favoritos y calificaciones.",
+          },
+          {
+            title: "Entrega y publicación en Android",
+            description:
+              "Contribuí a preparar builds de Android y a publicar el MVP en Google Play, junto con un lead responsable del desarrollo backend.",
+          },
+        ],
+        outcomeTitle: "Resultado",
+        outcome:
+          "El MVP se publicó en Google Play. Las actualizaciones posteriores del repositorio no llegaron a publicarse en la tienda y el proyecto está pendiente de continuar. Una solución white-label para organizaciones con necesidades similares es una posible evolución futura.",
+      },
       view_certificate: "Ver certificado",
       view_repo: "Ver Repositorio",
       whatsapp_cta: "¡Hablemos!",
@@ -217,7 +299,7 @@ const resources = {
       Reco_description:
         "Desarrollada en React.js con Redux y RTK Query, conecta usuarios con profesionales verificados. Su diseño atómico garantiza escalabilidad y fluidez.",
       RecoApp_description:
-        "Reco App, desarrollada en React Native con Expo, Redux y RTK Query, conecta usuarios con profesionales verificados. Publicada en Google Play Store. Su diseño atómico garantiza escalabilidad y una experiencia fluida.",
+        "Marketplace móvil en React Native que conecta a personas en Guatemala con profesionales independientes. Su MVP se publicó en Google Play.",
       Superheroes_description:
         "App móvil en React Native y TypeScript para gestión de equipos de superhéroes. Implementa CRUD de equipos, autenticación biométrica, búsqueda offline y favoritos, usando Redux Toolkit para estado global, consumo de API y persistencia de datos.",
       FocusTime_description:

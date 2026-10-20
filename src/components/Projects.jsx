@@ -1,8 +1,8 @@
 import { Box, Typography, Grid } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import byteCode from "../assets/images/byteCode_landing.jpg";
-import Reco from "../assets/images/reco_desktop.jpg";
-import RecoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.jpg";
+import byteCode from "../assets/images/byteCode_landing.webp";
+import Reco from "../assets/images/reco_desktop.webp";
+import RecoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.webp";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
@@ -11,10 +11,10 @@ import gitLogo from "../assets/images/logos/git.svg";
 import reduxLogo from "../assets/images/logos/redux.svg";
 import materialUILogo from "../assets/images/logos/mui.svg";
 import expoLogo from "../assets/images/logos/expo.svg";
-import trakkonApp from "../assets/images/trakkon_project.jpg";
+import trakkonApp from "../assets/images/trakkon_project.webp";
 import trakkonLogo from "../assets/images/trakkon-logo.svg";
-import alltixWeb from "../assets/images/alltix_website.jpg";
-import tikimayastore from "../assets/images/tikimayastore_website.jpg";
+import alltixWeb from "../assets/images/alltix_website.webp";
+import tikimayastore from "../assets/images/tikimayastore_website.webp";
 import tikimayalogo from "../assets/images/tikimaya_logo.svg";
 import ProjectCardsSection from "./ProjectCardsSection";
 

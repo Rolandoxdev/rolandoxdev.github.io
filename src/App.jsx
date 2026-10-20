@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useRef } from "react";
 import {
   Navigate,
   Route,
@@ -10,11 +10,14 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
-import TrakkonCaseStudy from "./components/TrakkonCaseStudy";
-import RecoCaseStudy from "./components/RecoCaseStudy";
 import Certifications from "./components/Certifications";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+
+const TrakkonCaseStudy = lazy(() =>
+  import("./components/TrakkonCaseStudy.jsx")
+);
+const RecoCaseStudy = lazy(() => import("./components/RecoCaseStudy.jsx"));
 
 const scrollPositions = new Map();
 
@@ -135,8 +138,22 @@ const App = () => (
     <ScrollRevealObserver />
     <Routes>
       <Route path="/" element={<PortfolioHome />} />
-      <Route path="/projects/trakkon" element={<TrakkonCaseStudy />} />
-      <Route path="/projects/reco" element={<RecoCaseStudy />} />
+      <Route
+        path="/projects/trakkon"
+        element={
+          <Suspense fallback={null}>
+            <TrakkonCaseStudy />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/projects/reco"
+        element={
+          <Suspense fallback={null}>
+            <RecoCaseStudy />
+          </Suspense>
+        }
+      />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </>

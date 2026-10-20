@@ -59,9 +59,13 @@ const ProjectCardsSection = ({ title, projects }) => {
             >
               <CardMedia
                 component="img"
-                height="400"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
                 image={project.image}
                 alt={project.title}
+                sx={{ height: 400, objectFit: "cover" }}
               />
               <Box
                 className="overlay"
@@ -88,8 +92,11 @@ const ProjectCardsSection = ({ title, projects }) => {
                 <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
                   <img
                     src={project.logo}
-                    href={project.liveLink}
                     alt={`${project.title} logo`}
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       marginRight: "8px",
                       verticalAlign: "sub",

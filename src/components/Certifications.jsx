@@ -193,6 +193,10 @@ const Certifications = () => {
                     component="img"
                     image={cert.logo}
                     alt={cert.issuer}
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                    decoding="async"
                     sx={{
                       width: 20,
                       height: 20,

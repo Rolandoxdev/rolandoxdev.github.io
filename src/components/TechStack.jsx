@@ -1,4 +1,4 @@
-import { Box, Typography, Link, Tooltip } from "@mui/material";
+import { Box, Typography, Tooltip } from "@mui/material";
 import reactLogo from "../assets/images/logos/react.svg";
 import jsLogo from "../assets/images/logos/javascript.svg";
 import reduxLogo from "../assets/images/logos/redux.svg";
@@ -27,6 +27,7 @@ const duplicatedTechs = [...techs, ...techs];
 const TechStack = () => (
   <Box
     id="techstack"
+    data-scroll-reveal
     sx={{
       py: { xs: 6, md: 10 },
       px: { xs: 0, md: 0 },
@@ -55,12 +56,13 @@ const TechStack = () => (
     >
       <Box
         sx={{
-          display: "flex",
-          alignItems: "center",
-          animation: "scroll 90s linear infinite",
-          width: "max-content",
-        }}
-      >
+        display: "flex",
+        alignItems: "center",
+        animation: "scroll 90s linear infinite",
+        width: "max-content",
+      }}
+      className="tech-stack-track"
+    >
         {duplicatedTechs.map((tech, idx) => (
           <Tooltip title={tech.name} key={idx}>
             <Box
@@ -71,6 +73,8 @@ const TechStack = () => (
                 mx: { xs: 2, md: 4 },
                 minWidth: { xs: 70, md: 100 },
               }}
+              aria-hidden={idx >= techs.length}
+              data-marquee-copy={idx >= techs.length ? "true" : undefined}
             >
               <Box
                 component="img"

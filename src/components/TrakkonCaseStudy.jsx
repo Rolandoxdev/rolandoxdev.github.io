@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
-import trakkonApp from "../assets/images/trakkon_project.jpg";
+import trakkonApp from "../assets/images/trakkon_project.webp";
 import trakkonLogo from "../assets/images/trakkon-logo.svg";
 
 const TrakkonCaseStudy = () => {
@@ -157,6 +157,10 @@ const TrakkonCaseStudy = () => {
                   component="img"
                   src={trakkonApp}
                   alt={t("case_study.imageAlt")}
+                  width={1200}
+                  height={900}
+                  fetchPriority="high"
+                  decoding="async"
                   sx={{
                     display: "block",
                     width: "100%",

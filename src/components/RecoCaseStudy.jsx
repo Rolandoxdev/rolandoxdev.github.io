@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
-import recoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.jpg";
+import recoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.webp";
 import recoLogo from "../assets/images/reco_logo.svg";
 
 const RecoCaseStudy = () => {
@@ -156,6 +156,10 @@ const RecoCaseStudy = () => {
                   component="img"
                   src={recoApp}
                   alt={t("reco_case_study.imageAlt")}
+                  width={1200}
+                  height={900}
+                  fetchPriority="high"
+                  decoding="async"
                   sx={{
                     display: "block",
                     width: "100%",

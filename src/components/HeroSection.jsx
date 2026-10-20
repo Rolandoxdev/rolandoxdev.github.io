@@ -7,14 +7,36 @@ import GlitchVideo from "../assets/videos/glitch_small.mp4";
 
 const HeroSection = () => {
   const [showButton, setShowButton] = useState(true);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
   const { t } = useTranslation();
   const videoRef = useRef(null);
 
   useEffect(() => {
+    const motionPreference = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    );
+    const updateMotionPreference = (event) =>
+      setPrefersReducedMotion(event.matches);
+
+    motionPreference.addEventListener("change", updateMotionPreference);
+    return () =>
+      motionPreference.removeEventListener("change", updateMotionPreference);
+  }, []);
+
+  useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.5;
+      if (prefersReducedMotion) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play().catch(() => {});
+      }
     }
-  }, []);
+  }, [prefersReducedMotion]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +65,7 @@ const HeroSection = () => {
     >
       <video
         ref={videoRef}
-        autoPlay
+        autoPlay={!prefersReducedMotion}
         loop
         muted
         playsInline
@@ -120,16 +142,20 @@ const HeroSection = () => {
             fontSize: { xs: "2.5rem", md: "4rem", lg: "5rem" },
           }}
         >
-          <ReactTypingEffect
-            text={[
-              t("hero.title.creative"),
-              t("hero.title.innovative"),
-              t("hero.title.passionate"),
-            ]}
-            speed={60}
-            eraseSpeed={50}
-            eraseDelay={1500}
-          />
+          {prefersReducedMotion ? (
+            t("hero.title.creative")
+          ) : (
+            <ReactTypingEffect
+              text={[
+                t("hero.title.creative"),
+                t("hero.title.innovative"),
+                t("hero.title.passionate"),
+              ]}
+              speed={60}
+              eraseSpeed={50}
+              eraseDelay={1500}
+            />
+          )}
         </Typography>
       </Box>
       <Box>
@@ -176,6 +202,7 @@ const HeroSection = () => {
             <Box></Box>
             <Box>
               <ExpandMoreIcon
+                className="scroll-cue-icon"
                 sx={{
                   ml: 1,
                   animation: "bounce 2s infinite",

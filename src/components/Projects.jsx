@@ -3,11 +3,9 @@ import { useTranslation } from "react-i18next";
 import byteCode from "../assets/images/byteCode_landing.jpg";
 import Reco from "../assets/images/reco_desktop.jpg";
 import RecoApp from "../assets/images/RecoApp_RolandoOrellana_Developer.jpg";
-import heroesApp from "../assets/images/heroesApp.jpg";
 import byteCode_logo from "../assets/images/byteCode_logo.svg";
 import Reco_logo from "../assets/images/reco_logo.svg";
 import todo_logo from "../assets/images/todo_logo.svg";
-import superHero from "../assets/images/super_logo.svg";
 import reactLogo from "../assets/images/logos/react.svg";
 import gitLogo from "../assets/images/logos/git.svg";
 import reduxLogo from "../assets/images/logos/redux.svg";
@@ -152,7 +150,7 @@ const Projects = () => {
   const webProjects = projects.filter((p) => p.type === "web");
 
   return (
-    <Box sx={{ py: 12, px: 4 }}>
+    <Box sx={{ py: 12, px: 4 }} data-scroll-reveal>
       <Grid
         container
         spacing={2}

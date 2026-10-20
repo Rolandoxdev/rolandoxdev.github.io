@@ -25,15 +25,35 @@ const ProjectCardsSection = ({ title, projects }) => {
         {title}
       </Typography>
       <Grid container spacing={4} sx={{ px: { xs: 2, md: 5, lg: 20 } }}>
-        {projects.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
+        {projects.map((project, index) => (
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={project.id}
+            data-scroll-reveal
+            sx={{ "--scroll-reveal-delay": `${Math.min(index, 4) * 70}ms` }}
+          >
             <Card
               sx={{
                 position: "relative",
                 borderRadius: 4,
                 boxShadow: "none",
+                transition: "transform 220ms ease, box-shadow 220ms ease",
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 12px 28px rgba(15, 76, 92, 0.12)",
+                },
                 "&:hover .overlay": {
                   opacity: 1,
+                },
+                "&:focus-within .overlay": {
+                  opacity: 1,
+                },
+                "@media (hover: none)": {
+                  "& .overlay": { opacity: 1 },
+                  "&:hover": { transform: "none", boxShadow: "none" },
                 },
               }}
             >

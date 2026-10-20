@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import AboutMe from "./components/AboutMe";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import TrakkonCaseStudy from "./components/TrakkonCaseStudy";
@@ -18,6 +17,41 @@ import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const scrollPositions = new Map();
+
+const ScrollRevealObserver = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const elements = document.querySelectorAll("[data-scroll-reveal]");
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach((element) => {
+        element.dataset.scrollRevealed = "true";
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.dataset.scrollRevealed = "true";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  return null;
+};
 
 const ScrollManager = () => {
   const location = useLocation();
@@ -98,6 +132,7 @@ const PortfolioHome = () => {
 const App = () => (
   <>
     <ScrollManager />
+    <ScrollRevealObserver />
     <Routes>
       <Route path="/" element={<PortfolioHome />} />
       <Route path="/projects/trakkon" element={<TrakkonCaseStudy />} />

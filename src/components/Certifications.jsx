@@ -155,7 +155,15 @@ const Certifications = () => {
         alignItems="stretch"
       >
         {certifications.map((cert, idx) => (
-          <Grid item xs={12} sm={6} md={4} key={idx}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={idx}
+            data-scroll-reveal
+            sx={{ "--scroll-reveal-delay": `${Math.min(idx, 4) * 55}ms` }}
+          >
             <Card
               sx={{
                 height: "75%",

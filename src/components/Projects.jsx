@@ -171,7 +171,7 @@ const Projects = () => {
             }}
             gutterBottom
           >
-            {t("Projects")}
+            {t("projects")}
           </Typography>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -190,11 +190,11 @@ const Projects = () => {
       </Grid>
 
       <ProjectCardsSection
-        title={t("projects.mobileTitle", "Mobile Projects")}
+        title={t("mobileTitle", "Mobile Projects")}
         projects={mobileProjects}
       />
       <ProjectCardsSection
-        title={t("projects.webTitle", "Web Projects")}
+        title={t("webTitle", "Web Projects")}
         projects={webProjects}
       />
     </Box>

@@ -164,10 +164,10 @@ const resources = {
       hero: {
         name: "Rolando Orellana",
         title: {
-          creative: "Designer",
-          developer: "Developer",
-          innovative: "Innovator",
-          passionate: "Strategist",
+          creative: "Diseñador",
+          developer: "Desarrollador",
+          innovative: "Innovador",
+          passionate: "Estratega",
         },
         description:
           "Desarrollador React Native con 3 años de experiencia construyendo y lanzando aplicaciones móviles en producción. Construyendo arquitecturas escalables, sistemas multi-tenant y despliegues en App Store usando React Native, Redux Toolkit y APIs REST.",
@@ -185,6 +185,8 @@ const resources = {
       home: "Inicio",
       live_preview: "Vista previa",
       projects: "Proyectos",
+      webTitle: "Proyectos Web",
+      mobileTitle: "Proyectos Móviles",
       certifications: "Certificaciones",
       case_study: {
         cta: "Ver caso de estudio",

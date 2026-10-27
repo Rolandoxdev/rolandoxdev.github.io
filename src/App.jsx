@@ -25,32 +25,55 @@ const ScrollRevealObserver = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const elements = document.querySelectorAll("[data-scroll-reveal]");
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const root = document.getElementById("root");
+    if (!root) return undefined;
 
-    if (reducedMotion || !("IntersectionObserver" in window)) {
-      elements.forEach((element) => {
-        element.dataset.scrollRevealed = "true";
-      });
-      return;
-    }
+    const reducedMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const observer =
+      !reducedMotion && "IntersectionObserver" in window
+        ? new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.dataset.scrollRevealed = "true";
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
+          )
+        : null;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.dataset.scrollRevealed = "true";
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
-    );
+    const observeElement = (element) => {
+      if (element.dataset.scrollRevealed === "true") return;
+      if (observer) observer.observe(element);
+      else element.dataset.scrollRevealed = "true";
+    };
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    const scanNode = (node) => {
+      if (node.nodeType !== 1) return;
+      if (node.matches("[data-scroll-reveal]")) observeElement(node);
+      node.querySelectorAll("[data-scroll-reveal]").forEach(observeElement);
+    };
+
+    root.querySelectorAll("[data-scroll-reveal]").forEach(observeElement);
+
+    const mutationObserver =
+      "MutationObserver" in window
+        ? new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+              mutation.addedNodes.forEach(scanNode);
+            });
+          })
+        : null;
+    mutationObserver?.observe(root, { childList: true, subtree: true });
+
+    return () => {
+      observer?.disconnect();
+      mutationObserver?.disconnect();
+    };
   }, [location.pathname]);
 
   return null;

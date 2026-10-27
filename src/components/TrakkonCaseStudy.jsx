@@ -102,6 +102,7 @@ const TrakkonCaseStudy = () => {
             <Typography
               variant="body2"
               color="text.secondary"
+              data-scroll-reveal
               sx={{ mt: 3, maxWidth: 650, lineHeight: 1.8 }}
             >
               {t("case_study.overview")}
@@ -174,7 +175,7 @@ const TrakkonCaseStudy = () => {
           </Grid>
         </Grid>
 
-        <Box sx={{ mt: { xs: 6, md: 8 } }}>
+        <Box sx={{ mt: { xs: 6, md: 8 } }} data-scroll-reveal>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}>
             <AppSettingsAltIcon color="primary" aria-hidden="true" />
             <Typography variant="h5" component="h2" fontWeight={600}>
@@ -226,6 +227,7 @@ const TrakkonCaseStudy = () => {
         </Box>
 
         <Box
+          data-scroll-reveal
           sx={{
             mt: { xs: 5, md: 7 },
             p: { xs: 3, md: 4 },

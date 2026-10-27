@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Typography, Box, Button } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useTranslation } from "react-i18next";
 import ReactTypingEffect from "react-typing-effect";
-import WaveMeshCanvas from "./WaveMeshCanvas";
+import heroBackground from "../assets/images/profileRolandoOrellana.webp";
 
 const HeroSection = () => {
   const [showButton, setShowButton] = useState(true);
@@ -14,8 +14,6 @@ const HeroSection = () => {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
   );
   const { t } = useTranslation();
-  const visualRef = useRef(null);
-  const heroSectionRef = useRef(null);
   const animatedWords = useMemo(
     () => [
       t("hero.title.creative"),
@@ -40,26 +38,6 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    if (prefersReducedMotion || !visualRef.current) return undefined;
-
-    let frameId;
-    const updateParallax = () => {
-      window.cancelAnimationFrame(frameId);
-      frameId = window.requestAnimationFrame(() => {
-        const offset = Math.min(window.scrollY * 0.2, window.innerHeight * 0.18);
-        visualRef.current?.style.setProperty("--hero-parallax-y", `${offset}px`);
-      });
-    };
-
-    updateParallax();
-    window.addEventListener("scroll", updateParallax, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", updateParallax);
-      window.cancelAnimationFrame(frameId);
-    };
-  }, [prefersReducedMotion]);
-
-  useEffect(() => {
     const handleScroll = () => {
       setShowButton(window.scrollY <= 0);
     };
@@ -71,7 +49,6 @@ const HeroSection = () => {
   return (
     <Box
       component="section"
-      ref={heroSectionRef}
       sx={{
         position: "relative",
         display: "flex",
@@ -85,13 +62,23 @@ const HeroSection = () => {
       }}
     >
       <Box
-        ref={visualRef}
         className="hero-visual"
         aria-hidden="true"
         sx={{ position: "absolute", inset: 0, zIndex: -1, pointerEvents: "none" }}
       >
         <Box className="hero-aurora" />
-        <WaveMeshCanvas />
+        <Box
+          component="img"
+          className="hero-background-image"
+          src={heroBackground}
+          alt=""
+          aria-hidden="true"
+          width={1600}
+          height={893}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
       </Box>
 
       <Box sx={{ position: "relative", zIndex: 1 }}>
@@ -120,7 +107,7 @@ const HeroSection = () => {
           >
             {t("hero.title.developer")}
           </Typography>
-          <Box sx={{ borderBottom: "2px solid white", width: "100%" }} />
+          <Box sx={{ borderBottom: "2px solid white", width: "20%" }} />
         </Box>
         <Box>
           <Typography

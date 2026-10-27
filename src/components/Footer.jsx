@@ -71,7 +71,7 @@ const Footer = () => {
         </IconButton>
         <IconButton
           component="a"
-          href="https://github.com/orellanamr"
+          href="https://github.com/Rolandoxdev"
           target="_blank"
           rel="noopener"
           sx={{ color: "black" }}

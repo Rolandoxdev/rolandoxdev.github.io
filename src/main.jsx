@@ -8,6 +8,7 @@ import "./i18n/i18n";
 import theme from "./theme.js";
 import "./scroll-reveal.css";
 import "./hero-visual.css";
+import "./landing-scroll.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

@@ -49,8 +49,9 @@ const HeroSection = () => {
   return (
     <Box
       component="section"
+      id="home"
+      className="hero-sticky-layer"
       sx={{
-        position: "relative",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

@@ -130,26 +130,26 @@ const ScrollManager = () => {
 
 const PortfolioHome = () => {
   return (
-    <div>
+    <div className="portfolio-page">
       <Navbar />
-      <div id="home">
-        <HeroSection />
-      </div>
-      <div id="techStack">
-        <TechStack />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-            {/* <div id="about">
-        <AboutMe />
-      </div> */}
-      <div id="certifications">
-        <Certifications />
-      </div>
-      <div id="contact">
-        <Footer />
-      </div>
+      <HeroSection />
+      <main className="landing-scroll-content">
+        <div id="techStack">
+          <TechStack />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        {/* <div id="about">
+          <AboutMe />
+        </div> */}
+        <div id="certifications">
+          <Certifications />
+        </div>
+        <div id="contact">
+          <Footer />
+        </div>
+      </main>
       <WhatsAppFloat />
     </div>
   );
